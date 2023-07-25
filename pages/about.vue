@@ -1,13 +1,12 @@
 <template>
   <div>
     about page
+    <star-rating rating="2.5" />
   </div>
 </template>
 
 <script>
-export default {
 
-};
 </script>
 
 <style scoped>

@@ -88,10 +88,10 @@ export default {
 
 .cart__icon {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   @include box(27px, 24px);
-  transform: translateX(50%) translateY(15px);
+  transform: translateX(-50%) translateY(-50%);
   z-index: 100;
 }
 </style>
