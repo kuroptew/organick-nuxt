@@ -95,7 +95,9 @@
         stroke-miterlimit="10"
       />
     </svg>
-    Organick
+    <p class="logo__text">
+      Organick
+    </p>
   </div>
 </template>
 
@@ -106,14 +108,17 @@
 .logo-container {
   display: flex;
   align-items: center;
-  @include box(200px, 54px);
-  @include font-size(38,45);
-  letter-spacing: 0.1px;
-  color: $dark-blue;
 }
 
 .logo__img {
-  margin-right: 8px;
   @include box(39px,56px);
+}
+
+.logo__text{
+  margin-left: 8px;
+  @include font-size(38,45);
+  font-weight: bold;
+  color: $dark-blue;
+  letter-spacing: -1.4px;
 }
 </style>

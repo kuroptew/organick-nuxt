@@ -56,9 +56,8 @@ export default {
 .cart{
   display: flex;
   align-items: center;
-  padding: 6px;
-  width: 300px;
-  //@include box(160px, 66px);
+  padding: 5px 6px;
+  @include box(160px, 66px);
   @include font-size(18,21);
   font-weight: bold;
   color: $dark-blue;
