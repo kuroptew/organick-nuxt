@@ -116,19 +116,19 @@
           Utility pages
         </h3>
         <ul class="footer__utility-list">
-          <li class="utility__item">
+          <li class="utility-list__item">
             Style guide
           </li>
-          <li class="utility__item">
+          <li class="utility-list__item">
             404 not found
           </li>
-          <li class="utility__item">
+          <li class="utility-list__item">
             Password protected
           </li>
-          <li class="utility__item">
+          <li class="utility-list__item">
             Licences
           </li>
-          <li class="utility__item">
+          <li class="utility-list__item">
             Changelog
           </li>
         </ul>
@@ -170,12 +170,12 @@ export default {
 
 .footer-container_left {
   .footer__title {
+    margin-bottom: 32px;
     text-align: right;
   }
 }
 
 .footer__title {
-  margin-bottom: 32px;
   @include font-size(30,35);
   color: $dark-blue;
 }
@@ -253,6 +253,24 @@ export default {
   left: 50%;
   @include box(20px);
   transform: translateX(-50%) translateY(-50%);
+}
+
+.footer-container_right {
+  .footer__title {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__utility-list {
+  list-style: none;
+  color: $black;
+}
+
+.utility-list__item {
+  @include font-size(18,50);
+  font-family: "Open Sans", sans-serif;
+  &:not(:last-child){
+}
 }
 
 </style>
