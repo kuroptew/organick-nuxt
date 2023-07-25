@@ -1,0 +1,77 @@
+<template>
+  <div class="subscribe-form-container">
+    <h2 class="subscribe-form__title">
+      Subscribe to
+      our Newsletter
+    </h2>
+    <form class="subsrcibe-form">
+      <input
+        class="subsrcibe-form__input"
+        type="email"
+        placeholder="Your email adress"
+      >
+      <button class="subscribe-form__btn">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+
+};
+</script>
+
+<style lang="scss" scoped>
+.subscribe-form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 185px auto 117px auto;
+  padding: 105px 70px;
+  max-width: 1400px;
+  background-image: url("~/assets/image/bg-subscribe-form.png");
+  @include cover-background();
+  border-radius: 30px;
+}
+
+.subscribe-form__title {
+  max-width: 357px;
+  @include font-size(50,60);
+  font-weight: bold;
+  color: #FFF;
+}
+
+.subsrcibe-form__input {
+  width: 350px;
+  margin-right: 6px;
+  padding: 30px 23px;
+  border: none;
+  border-radius: 16px;
+  @include font-size(18,21);
+  font-style: italic;
+  color: $black;
+
+  &::placeholder {
+    color: #ABABAB;
+  }
+}
+
+.subscribe-form__btn {
+  padding: 28px;
+  width: 220px;
+  text-align: center;
+  @include font-size(20,23);
+  border-radius: 16px;
+  font-weight: bold;
+  background-color: $dark-blue;
+  color: #FFF;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+</style>

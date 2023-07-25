@@ -1,0 +1,44 @@
+//Roboto font
+@font-face {
+  font-family: 'Roboto';
+  src: local(''), url('../assets/fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+  url('../assets/fonts/Roboto/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local(''),
+  url('../assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Roboto/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local(''),
+  url('../assets/fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+  url('../assets/fonts/Roboto/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local(''),
+  url('../assets/fonts/Roboto/Roboto-Italic.woff2') format('woff2'),
+  url('../assets/fonts/Roboto/Roboto-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+//Yellowtail font
+@font-face {
+  font-family: 'Yellowtail';
+  src: local(''), url('../assets/fonts/Yellowtail/Yellowtail-Regular.woff2') format('woff2'),
+  url('../assets/fonts/Yellowtail/Yellowtail-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
