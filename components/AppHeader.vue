@@ -1,11 +1,11 @@
 <template>
   <header class="header">
-    <div class="header-container">
+    <div class="container">
       <nuxt-link to="/">
         <logo />
       </nuxt-link>
-      <app-navigation />
-      <search />
+      <navigation />
+      <header-search />
       <cart />
     </div>
   </header>
@@ -13,10 +13,12 @@
 
 <script>
 
+export default {
+};
 </script>
 
 <style lang="scss" scoped>
-.header-container {
+.container {
   max-width: 1590px;
   margin: 0 auto;
   padding: 70px 0;

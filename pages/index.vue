@@ -1,14 +1,14 @@
 <template>
   <main>
+    <header />
     <section-hero-main />
+    <section-our-products />
     <subsribe-form />
   </main>
 </template>
 
 <script>
-import SubsribeForm from '../components/SubsribeForm';
 
 export default {
-  components: { SubsribeForm },
 };
 </script>

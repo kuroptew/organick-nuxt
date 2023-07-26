@@ -11,11 +11,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  rules: {
-    'max-len': ['error', { code: 120 }],
-    'vue/max-len': ['error', {
-      code: 120,
-      template: 100,
-    }],
-  },
 });

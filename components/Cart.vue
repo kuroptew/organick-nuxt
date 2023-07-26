@@ -1,6 +1,6 @@
 <template>
   <button class="cart">
-    <div class="cart-contnainer__icon">
+    <div class="cart-container__icon">
       <svg
         class="cart__icon"
         fill="none"
@@ -45,7 +45,7 @@
 export default {
   props: {
     total: {
-      type: String,
+      type: Number,
       default: 0,
     },
   },
@@ -70,14 +70,14 @@ export default {
   &:hover{
     color: rgba($dark-blue, 0.8);
 
-    .cart-contnainer__icon {
+    .cart-container__icon {
       opacity: 0.8;
     }
 
   }
 }
 
-.cart-contnainer__icon{
+.cart-container__icon{
   position: relative;
   display: inline-block;
   margin-right: 12px;

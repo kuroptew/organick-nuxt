@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-container_left">
+    <div class="container">
+      <div class="footer__content_left">
         <h3 class="footer__title">
           Contact us
         </h3>
@@ -34,7 +34,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer-container_center">
+      <div class="footer__content_center">
         <logo />
         <p class="footer__text">
           Simply dummy text of the printing and typesetting industry.
@@ -111,7 +111,7 @@
         </ul>
         <div />
       </div>
-      <div class="footer-container_right">
+      <div class="footer__content_right">
         <h3 class="footer__title">
           Utility pages
         </h3>
@@ -144,31 +144,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer-container {
+.container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.footer-container_center {
+.footer__content_center {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.footer-container_center {
   padding: 0 41px;
   border-left: 1px solid $dark-grey;
   border-right: 1px solid $dark-grey;
 }
 
-.footer-container_left,
-.footer-container_right {
+.footer__content_left,
+.footer__content_right {
   padding: 0 50px;
 }
 
-.footer-container_left {
+.footer__content_left {
   .footer__title {
     margin-bottom: 32px;
     text-align: right;
@@ -231,7 +228,6 @@ export default {
   &:not(:last-child){
     margin-right: 15px;
   }
-
 }
 
 .social-list__link{
@@ -255,7 +251,7 @@ export default {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.footer-container_right {
+.footer__content_right {
   .footer__title {
     margin-bottom: 24px;
   }
@@ -269,8 +265,5 @@ export default {
 .utility-list__item {
   @include font-size(18,50);
   font-family: "Open Sans", sans-serif;
-  &:not(:last-child){
 }
-}
-
 </style>

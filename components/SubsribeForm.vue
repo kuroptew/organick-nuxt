@@ -1,20 +1,22 @@
 <template>
-  <div class="subscribe-form-container">
-    <h2 class="subscribe-form__title">
-      Subscribe to
-      our Newsletter
-    </h2>
-    <form class="subsrcibe-form">
-      <input
-        class="subsrcibe-form__input"
-        type="email"
-        placeholder="Your email adress"
-      >
-      <button class="subscribe-form__btn">
-        Subscribe
-      </button>
-    </form>
-  </div>
+  <section class="section-subscribe-form">
+    <div class="container">
+      <h2 class="subscribe-form__title">
+        Subscribe to
+        our Newsletter
+      </h2>
+      <form class="subsrcibe-form">
+        <input
+          class="subsrcibe-form__input"
+          type="email"
+          placeholder="Your email adress"
+        >
+        <button class="subscribe-form__btn">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -24,11 +26,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.subscribe-form-container {
+.section-subscribe-form {
+  margin-top: 185px;
+  margin-bottom: 117px;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 185px auto 117px auto;
+  margin: 0 auto;
   padding: 105px 70px;
   max-width: 1400px;
   background-image: url("~/assets/image/bg-subscribe-form.png");
