@@ -21,7 +21,7 @@
         />
       </div>
       <app-button-with-arrow
-        :type="'dark'"
+        :type="'blue'"
         :text="'Load more'"
       />
     </div>
@@ -130,23 +130,22 @@ export default {
   }
 
   &__subtitle {
-    display: block;
     margin-bottom: 8px;
     @include font-size(36, 50);
     font-family: "Yellowtail", sans-serif;
     font-weight: normal;
     color: $green;
     text-align: center;
+    text-transform: capitalize;
   }
 
   &__title {
-    margin-left: auto;
-    margin-right: auto;
     @include font-size(50, 60);
     margin-bottom: 40px;
     font-weight: bold;
     color: $dark-blue;
     text-align: center;
+    text-transform: capitalize;
   }
 
   &__list {

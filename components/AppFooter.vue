@@ -28,9 +28,9 @@
             <h4 class="contact-list__title">
               Adress
             </h4>
-            <adress class="contact-list__info">
+            <address class="contact-list__info">
               88 road, borklyn street, USA
-            </adress>
+            </address>
           </li>
         </ul>
       </div>

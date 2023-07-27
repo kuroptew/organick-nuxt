@@ -12,14 +12,13 @@
           of life
         </h1>
         <app-button-with-arrow
-          :type="'light'"
+          :type="'orange'"
           :text="'Explore Now'"
         />
       </div>
     </div>
     <div
       class="section-hero__content_right"
-      :type="'light'"
     />
   </section>
 </template>
@@ -38,7 +37,6 @@ export default {
   grid-template-columns: 260px auto 1130px;
 
   &__subtitle {
-    display: block;
     margin-bottom: 8px;
     @include font-size(36, 50);
     font-family: "Yellowtail", sans-serif;
@@ -47,10 +45,8 @@ export default {
   }
 
   &__title {
-    margin-left: auto;
-    margin-right: auto;
-    @include font-size(70, 80);
     margin-bottom: 23px;
+    @include font-size(70, 80);
     font-weight: bold;
     color: $dark-blue;
     letter-spacing: -1px;

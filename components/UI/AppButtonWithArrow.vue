@@ -33,7 +33,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'dark',
+      default: 'blue',
     },
     text: {
       type: String,
@@ -46,18 +46,27 @@ export default {
 <style lang="scss" scoped>
 .btn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 28px 40px;
+  padding: 28px 38px;
   width: 220px;
   border-radius: 16px;
   cursor: pointer;
 
-  &_dark{
+  &_blue {
     background-color: $dark-blue;
+
+    .btn__text {
+      color: #FFF;
+    }
   }
 
-  &_light{
+  &_orange{
     background-color: $orange;
+
+    .btn__text {
+      color: $dark-blue;
+    }
   }
 
 &:hover {
@@ -70,16 +79,8 @@ export default {
   font-weight: bold;
 
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 10px;
   text-transform: capitalize;
-
-  &_dark {
-    color: #FFF;
-  }
-
-  &_light {
-    color: $dark-blue;
-  }
 }
 
 .btn__icon {
