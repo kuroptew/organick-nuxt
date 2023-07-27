@@ -61,8 +61,17 @@ export default {
     }
   }
 
-  &_orange{
+  &_orange {
     background-color: $orange;
+
+    .btn__text {
+      color: $dark-blue;
+    }
+  }
+
+  &_white {
+    border: 1px solid $dark-blue;
+    background-color: #FFF;
 
     .btn__text {
       color: $dark-blue;
