@@ -50,15 +50,18 @@ export default {
     font-weight: bold;
     color: $dark-blue;
     letter-spacing: -1px;
-
   }
 }
 
-.section-hero__content_left {
+.section-hero__content_left,
+.section-hero__content_right {
   display: inline-block;
   height: 898px;
-  background-image: url("~/assets/image/bg-hero-main-left.jpg");
   @include cover-background();
+}
+
+.section-hero__content_left {
+  background-image: url("~/assets/image/bg-hero-main-left.jpg");
 }
 
 .section-hero__content_center {
@@ -73,9 +76,6 @@ export default {
 }
 
 .section-hero__content_right {
-  display: inline-block;
-  height: 898px;
   background-image: url("~/assets/image/bg-hero-main-right.jpg");
-  @include cover-background();
 }
 </style>

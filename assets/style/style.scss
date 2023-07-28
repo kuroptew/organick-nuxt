@@ -1,4 +1,6 @@
 @import "fonts";
+@import 'swiper/css';
+@import 'swiper/css/pagination';
 
 html {
   font-family:'Roboto', sans-serif;
@@ -7,4 +9,22 @@ html {
 
 body {
   background-color: #FFF;
+}
+
+//Стили пагинации
+.swiper-pagination-bullet {
+  @include box(8px);
+  background-color: #C4C4C4;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: $green;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 102px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 6px;
 }

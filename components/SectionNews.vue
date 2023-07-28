@@ -92,7 +92,6 @@
 
 <script>
 import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
-import bgSalats from '../assets/image/bg-salats.png';
 
 export default {
   components: { AppButtonWithArrow },

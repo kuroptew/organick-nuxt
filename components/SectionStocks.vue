@@ -33,20 +33,17 @@ export default {
   margin-bottom: 190px;
 }
 .container {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 1400px;
 }
 
 .stock {
-  display: inline-block;
   padding: 110px 55px;
   @include box(682px, 367px);
   @include cover-background;
   border-radius: 20px;
-
-  &:not(:last-child) {
-    margin-right: 36px;
-  }
 
   &__subtitle {
     margin-bottom: 8px;

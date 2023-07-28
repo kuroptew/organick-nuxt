@@ -122,8 +122,7 @@
 </template>
 
 <script>
-import AppButtonWithArrow from './UI/AppButtonWithArrow';
-import mailSvg from '../assets/image/mail.svg';
+import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
 
 export default {
   components: { AppButtonWithArrow },
@@ -222,6 +221,5 @@ export default {
       color: $black;
     }
   }
-
 }
 </style>

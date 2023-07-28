@@ -49,7 +49,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 28px 38px;
-  width: 220px;
+  min-width: 220px;
   border-radius: 16px;
   cursor: pointer;
 
@@ -95,5 +95,4 @@ export default {
 .btn__icon {
   @include box(19px);
 }
-
 </style>
