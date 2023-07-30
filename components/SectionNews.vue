@@ -14,31 +14,52 @@
           :type="'white'"
         />
       </div>
-      <ul class="section-news__list">
-        <card-news :bg-img="bgSalats" />
-        <card-news :bg-img="bgTomatos" />
-      </ul>
+      <div class="section-news__list">
+        <card-news
+          v-for="n in news"
+          :key="n.id"
+          :title="n.title"
+          :text="n.text"
+          :name="n.writer"
+          :bg-img="n.bgImg"
+        />
+      </div>
     </div>
   </section>
 </template>
 
-<script>
+<script setup>
 import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
 import CardNews from './CardNews.vue';
 
 import bgSalats from '../assets/image/bg-salats.png';
 import bgTomatos from '../assets/image/bg-tomatos.png';
 
-export default {
-  components: { CardNews, AppButtonWithArrow },
-
-  setup() {
-    return {
-      bgSalats,
-      bgTomatos,
-    };
+const news = [
+  {
+    id: 1,
+    writer: 'Rachi Card',
+    bgImg: bgSalats,
+    date: {
+      day: 25,
+      month: 'Nov',
+    },
+    title: 'Benefits of Vitamin C & How to Get It',
+    text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
   },
-};
+  {
+    id: 2,
+    writer: 'Rachi Card',
+    bgImg: bgTomatos,
+    date: {
+      day: 25,
+      month: 'Nov',
+    },
+    title: 'Benefits of Vitamin C & How to Get It',
+    text: 'Simply dummy text of the printing and typesetting industry. Lorem Ipsum',
+  },
+];
+
 </script>
 
 <style lang="scss" scoped>

@@ -144,5 +144,4 @@ definePageMeta({
   column-gap: 20px;
   row-gap: 40px;
 }
-
 </style>

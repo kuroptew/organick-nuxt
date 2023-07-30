@@ -47,6 +47,28 @@ export default {
       type: String,
       required: true,
     },
+    date: {
+      day: {
+        type: Number,
+        required: true,
+      },
+      month: {
+        type: String,
+        required: true,
+      },
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    text: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
@@ -87,7 +109,7 @@ export default {
 
   &__info {
     max-width: 612px;
-    padding: 46px 91px 60px 57px;
+    padding: 46px 90px 60px 57px;
     position: absolute;
     top: 50%;
     background-color: #FFF;
