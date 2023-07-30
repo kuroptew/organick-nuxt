@@ -28,98 +28,93 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import CardProduct from './CardProduct.vue';
-import img from '../assets/image/broccoli-img.png';
 import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+import img from '../assets/image/broccoli-img.png';
 
-export default {
-  components: { AppButtonWithArrow, CardProduct },
-  data() {
-    return {
-      products: [
-        {
-          id: 1,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 2,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 3,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 4,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 5,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 6,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 7,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-        {
-          id: 8,
-          img,
-          category: 'Vegetable',
-          name: 'Calabrese Broccoli',
-          price: 14,
-          oldPrice: 20,
-          rating: 5,
-        },
-      ],
-    };
+const products = [
+  {
+    id: 1,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
   },
-};
+  {
+    id: 2,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 3,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 4,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 5,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 6,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 7,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+  {
+    id: 8,
+    img,
+    category: 'Vegetable',
+    name: 'Calabrese Broccoli',
+    price: 14,
+    oldPrice: 20,
+    rating: 5,
+  },
+];
+
 </script>
 
 <style lang="scss" scoped>
 .section-our-products {
   margin-top: 176px;
   margin-bottom: 200px;
+
   .container {
     margin: 0 auto;
     max-width: 1400px;

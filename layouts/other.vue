@@ -19,9 +19,10 @@ import { computed } from 'vue';
 
 import bgAbout from '../assets/image/bg-about-hero.png';
 import bgPatternAbout from '../assets/image/bg-pattern-about.svg';
-
 import bgShop from '../assets/image/bg-shop-hero.png';
 import bgPatternShop from '../assets/image/bg-pattern-shop.svg';
+import bgNews from '../assets/image/bg-news-shop.png';
+import bgPatternNews from '../assets/image/bg-pattern-news.svg';
 
 const route = useRoute();
 
@@ -35,6 +36,11 @@ const dataHero = {
     title: 'Shop',
     bgImg: bgShop,
     bgPattern: bgPatternShop,
+  },
+  '/news': {
+    title: 'Recent news',
+    bgImg: bgNews,
+    bgPattern: bgPatternNews,
   },
 };
 

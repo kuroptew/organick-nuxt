@@ -23,7 +23,9 @@
         <NuxtLink>Projects</NuxtLink>
       </li>
       <li class="nav__item">
-        <NuxtLink>News</NuxtLink>
+        <NuxtLink to="/news">
+          News
+        </NuxtLink>
       </li>
     </ul>
   </nav>

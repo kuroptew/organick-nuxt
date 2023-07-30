@@ -48,6 +48,7 @@ export default {
     @include font-size(70, 82);
     color: $dark-blue;
     text-align: center;
+    text-transform: capitalize;
    }
 }
 </style>
