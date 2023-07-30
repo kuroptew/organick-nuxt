@@ -55,6 +55,7 @@ export default {
     },
     oldPrice: {
       type: Number,
+      default: null,
     },
     rating: {
       type: Number,

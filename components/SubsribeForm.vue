@@ -27,8 +27,8 @@ export default {
 
 <style lang="scss" scoped>
 .section-subscribe-form {
-  margin-top: 185px;
-  margin-bottom: 117px;
+  margin-top: 140px;
+  margin-bottom: 120px;
 }
 
 .container {

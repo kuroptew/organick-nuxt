@@ -24,7 +24,7 @@
 
 <script>
 import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
-import CardNews from './CardNews';
+import CardNews from './CardNews.vue';
 
 import bgSalats from '../assets/image/bg-salats.png';
 import bgTomatos from '../assets/image/bg-tomatos.png';

@@ -21,62 +21,17 @@
           }"
           :pagination="{ clickable: true }"
         >
-          <swiper-slide>
-            <div class="section-reviews__customer">
-              <img
-                class="section-reviews-customer__img"
-                src="~/assets/image/customer-avatar.png"
-                alt=""
-              >
-              <star-rating :rating="5" />
-              <p class="section-reviews-customer__comment">
-                Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-              </p>
-              <h4 class="section-reviews-customer__name">
-                Sara Taylor
-              </h4>
-              <div class="section-reviews-customer__role">
-                Consumer 1
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="section-reviews__customer">
-              <img
-                class="section-reviews-customer__img"
-                src="~/assets/image/customer-avatar.png"
-                alt=""
-              >
-              <star-rating :rating="5" />
-              <p class="section-reviews-customer__comment">
-                Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-              </p>
-              <h4 class="section-reviews-customer__name">
-                Sara Taylor
-              </h4>
-              <div class="section-reviews-customer__role">
-                Consumer2
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="section-reviews__customer">
-              <img
-                class="section-reviews-customer__img"
-                src="~/assets/image/customer-avatar.png"
-                alt=""
-              >
-              <star-rating :rating="5" />
-              <p class="section-reviews-customer__comment">
-                Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-              </p>
-              <h4 class="section-reviews-customer__name">
-                Sara Taylor
-              </h4>
-              <div class="section-reviews-customer__role">
-                Consumer 3
-              </div>
-            </div>
+          <swiper-slide
+            v-for="c in customers"
+            :key="c.id"
+          >
+            <review-customer
+              :avatar="c.avatar"
+              :comment="c.comment"
+              :name="c.name"
+              :role="c.role"
+              :rating="c.rating"
+            />
           </swiper-slide>
         </swiper>
         <!--        info-->
@@ -129,35 +84,63 @@
 </template>
 
 <script>
+// Import Swiper Vue.js components
 import {
   Pagination,
   Autoplay,
 } from 'swiper/modules';
-
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
+
+import ReviewCustomer from './ReviewCustomer.vue';
 import StarRating from './StarRating.vue';
+
+import avatarImg from '../assets/image/customer-avatar.png';
 
 export default {
   components: {
+    ReviewCustomer,
     StarRating,
     Swiper,
     SwiperSlide,
   },
 
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log('slide change');
-    };
+    const customers = [
+      {
+        id: 1,
+        name: 'Sara Taylor',
+        avatar: avatarImg,
+        rating: 5,
+        comment:
+                'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.\n',
+        role: 'Consumer 1',
+      },
+      {
+        id: 2,
+        name: 'Sara Taylor',
+        avatar: avatarImg,
+        rating: 5,
+        comment:
+            'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.\n',
+        role: 'Consumer 2',
+      },
+      {
+        id: 3,
+        name: 'Sara Taylor',
+        avatar: avatarImg,
+        rating: 5,
+        comment:
+            'Simply dummy text of the printing and typesetting industry. Lorem Ipsum simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.\n',
+        role: 'Consumer 3',
+      },
+    ];
+
     return {
-      onSwiper,
-      onSlideChange,
+      customers,
       modules: [Pagination, Autoplay],
     };
   },
+
 };
 
 </script>
@@ -212,45 +195,6 @@ export default {
   padding: 164px 0;
   max-width: 1108px;
   height: 100%;
-}
-
-.section-reviews__customer {
-  margin: 0 auto;
-  margin-bottom: 130px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 780px;
-}
-
-.section-reviews-customer {
-  &__img {
-    @include box(115px);
-    margin-bottom: 20px;
-    border-radius: 50%;
-  }
-
-  &__comment {
-    margin-top: 25px;
-    margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
-    @include font-size(18, 30);
-    color: $black;
-    text-align: center;
-  }
-
-  &__name {
-    @include font-size(25, 30);
-    font-weight: 600;
-    color: $dark-blue;
-  }
-
-  &__role {
-    font-family: 'Open Sans', sans-serif;
-    @include font-size(15, 25);
-    color: $black;
-  }
 }
 
 .section-reviews__info-list {

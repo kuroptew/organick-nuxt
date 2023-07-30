@@ -19,12 +19,15 @@ module.exports = {
   plugins: [
     'vue',
   ],
-  rules: {},
   settings: {
     'import/resolver': {
       nuxt: {
         extensions: ['.js', '.vue'],
       },
     },
+  },
+  rules: {
+    'vue/multi-word-component-names': 0,
+    'max-len': 'off',
   },
 };

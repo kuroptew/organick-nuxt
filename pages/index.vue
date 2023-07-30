@@ -6,7 +6,6 @@
     <section-our-products />
     <section-reviews />
     <section-news />
-    <subsribe-form />
   </main>
 </template>
 

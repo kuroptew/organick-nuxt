@@ -45,6 +45,7 @@ export default {
   props: {
     bgImg: {
       type: String,
+      required: true,
     },
   },
 };

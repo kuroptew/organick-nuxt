@@ -1,10 +1,11 @@
 <template>
-  <div>
-    about page
+  <div class="shop__list">
+    shop page
   </div>
 </template>
 
 <script setup>
+
 definePageMeta({
   layout: 'other',
 });

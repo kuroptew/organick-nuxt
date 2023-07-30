@@ -1,13 +1,15 @@
 <template>
-  <app-header />
-  <slot />
-  <app-footer />
+  <div>
+    <app-header />
+    <main>
+      <slot />
+      <subsribe-form />
+    </main>
+    <app-footer />
+  </div>
 </template>
 
-<script>
-
-export default {
-};
+<script setup>
 </script>
 
 <style scoped>

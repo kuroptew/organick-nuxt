@@ -2,26 +2,28 @@
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <nuxt-link to="/">
+        <NuxtLink to="/">
           Home
-        </nuxt-link>
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <nuxt-link to="/about">
+        <NuxtLink to="/about">
           About
-        </nuxt-link>
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <nuxt-link>Pages</nuxt-link>
+        <NuxtLink>Pages</NuxtLink>
       </li>
       <li class="nav__item">
-        <nuxt-link>Shop</nuxt-link>
+        <NuxtLink to="/shop">
+          Shop
+        </NuxtLink>
       </li>
       <li class="nav__item">
-        <nuxt-link>Projects</nuxt-link>
+        <NuxtLink>Projects</NuxtLink>
       </li>
       <li class="nav__item">
-        <nuxt-link>News</nuxt-link>
+        <NuxtLink>News</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -36,28 +38,28 @@ export default {
 <style lang="scss" scoped>
 .nav{
   margin-left: 150px;
-}
 
-.nav__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.nav__item {
-  a {
-    @include font-size(20,24);
-    font-weight: bold;
-    color: $dark-blue;
+  &__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
   }
 
-  .router-link-exact-active {
-    color:$orange;
-  }
+  &__item {
+    a {
+      @include font-size(20,24);
+      font-weight: bold;
+      color: $dark-blue;
+    }
 
-  &:not(:last-child){
-    margin-right: 42px;
-  };
+    .router-link-exact-active {
+      color:$orange;
+    }
+
+    &:not(:last-child){
+      margin-right: 42px;
+    };
+  }
 }
 </style>
