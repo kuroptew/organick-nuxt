@@ -69,9 +69,11 @@ export default {
 
   &:hover{
     color: rgba($dark-blue, 0.8);
+    transition: color 0.3s ease-in-out;
 
     .cart-container__icon {
       opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
     }
 
   }

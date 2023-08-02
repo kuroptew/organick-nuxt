@@ -202,7 +202,8 @@ export default {
   cursor: pointer;
 
   &:hover{
-  color: $orange;
+    color: $orange;
+    transition: color 0.3s ease-in-out;
 }
 }
 
@@ -239,6 +240,7 @@ export default {
 
   &:hover {
     opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 

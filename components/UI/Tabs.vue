@@ -57,7 +57,7 @@ const clickOnTab = (tabName) => {
 
       &:hover {
         opacity: 0.8;
-        transition:all 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
       }
 
       &.selected {
