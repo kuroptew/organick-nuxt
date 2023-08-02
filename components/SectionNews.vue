@@ -9,10 +9,12 @@
           We Believe in Working
           Accredited Farmers
         </h2>
-        <app-button-with-arrow
-          :text="'More news'"
-          :type="'white'"
-        />
+        <nuxt-link to="/news">
+          <app-button-arrow
+            :text="'More news'"
+            :type="'white'"
+          />
+        </nuxt-link>
       </div>
       <div class="section-news__list">
         <card-news
@@ -29,7 +31,7 @@
 </template>
 
 <script setup>
-import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+import AppButtonArrow from './UI/AppButtonArrow.vue';
 import CardNews from './CardNews.vue';
 
 import bgSalats from '../assets/image/bg-salats.png';

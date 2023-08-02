@@ -1,15 +1,14 @@
 <template>
-  <div>
-    about page
-  </div>
+  <section-hero-other
+    :title="'About us'"
+    :bg-img="bgAbout"
+    :bg-pattern="bgPatternAbout"
+  />
+  <div>about page</div>
 </template>
 
 <script setup>
-definePageMeta({
-  layout: 'other',
-});
+import bgAbout from '../assets/image/bg-about-hero.png';
+import bgPatternAbout from '../assets/image/bg-pattern-about.svg';
+
 </script>
-
-<style scoped>
-
-</style>

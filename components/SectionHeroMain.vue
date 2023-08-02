@@ -11,10 +11,12 @@
           healthier way
           of life
         </h1>
-        <app-button-with-arrow
-          :type="'orange'"
-          :text="'Explore Now'"
-        />
+        <nuxt-link to="/shop">
+          <app-button-arrow
+            :type="'orange'"
+            :text="'Explore Now'"
+          />
+        </nuxt-link>
       </div>
     </div>
     <div
@@ -23,12 +25,9 @@
   </section>
 </template>
 
-<script>
-import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+<script setup>
+import AppButtonArrow from './UI/AppButtonArrow.vue';
 
-export default {
-  components: { AppButtonWithArrow },
-};
 </script>
 
 <style lang="scss" scoped>

@@ -45,7 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 .btn {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 28px 38px;

@@ -1,31 +1,32 @@
 <template>
   <section-hero-other
-    :title="'Shop'"
-    :bg-img="bgShop"
-    :bg-pattern="bgPatternShop"
+    :title="'Shop single'"
+    :bg-img="bgShopSingle"
+    :bg-pattern="bgPatternShopSingle"
   />
-  <div class="shop__list">
-    <card-product
-      v-for="p in products"
-      :id="p.id"
-      :key="p.id"
-      :type="'dark'"
-      :img="p.img"
-      :category="p.category"
-      :price="p.price"
-      :old-price="p.oldPrice"
-      :rating="p.rating"
-      :name="p.name"
+  <div>
+    <section-product
+      :img="product.img"
+      :category="product.category"
+      :price="product.price"
+      :old-price="product.oldPrice"
+      :rating="product.rating"
+      :name="product.name"
+      :description="product.description"
     />
+    <p>Products {{ product.id }}</p>
   </div>
 </template>
 
 <script setup>
-import CardProduct from '../../components/CardProduct.vue';
+import { computed } from 'vue';
+import SectionProduct from '../../components/SectionProduct.vue';
 
+import bgShopSingle from '../../assets/image/bg-shop-single-hero.png';
+import bgPatternShopSingle from '../../assets/image/bg-pattern-shop-single.svg';
 import img from '../../assets/image/broccoli-img.png';
-import bgShop from '../../assets/image/bg-shop-hero.png';
-import bgPatternShop from '../../assets/image/bg-pattern-shop.svg';
+
+const { id } = useRoute().params;
 
 const products = [
   {
@@ -150,15 +151,9 @@ const products = [
   },
 ];
 
+const product = computed(() => products.find((p) => p.id === +id));
 </script>
 
-<style lang="scss" scoped>
-.shop__list {
-  max-width: 1400px;
-  margin: 90px auto 140px auto;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  column-gap: 20px;
-  row-gap: 40px;
-}
+<style scoped>
+
 </style>

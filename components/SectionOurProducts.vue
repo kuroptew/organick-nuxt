@@ -10,6 +10,7 @@
       <div class="section-our-products__list">
         <card-product
           v-for="p in products"
+          :id="p.id"
           :key="p.id"
           :type="'dark'"
           :img="p.img"
@@ -20,7 +21,7 @@
           :name="p.name"
         />
       </div>
-      <app-button-with-arrow
+      <app-button-arrow
         :type="'blue'"
         :text="'Load more'"
       />
@@ -30,7 +31,7 @@
 
 <script setup>
 import CardProduct from './CardProduct.vue';
-import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+import AppButtonArrow from './UI/AppButtonArrow.vue';
 import img from '../assets/image/broccoli-img.png';
 
 const products = [
@@ -42,6 +43,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 2,
@@ -51,6 +53,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 3,
@@ -60,6 +63,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 4,
@@ -69,6 +73,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 5,
@@ -78,6 +83,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 6,
@@ -87,6 +93,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 7,
@@ -96,6 +103,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
   {
     id: 8,
@@ -105,6 +113,7 @@ const products = [
     price: 14,
     oldPrice: 20,
     rating: 5,
+    description: 'Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley.',
   },
 ];
 
@@ -118,10 +127,7 @@ const products = [
   .container {
     margin: 0 auto;
     max-width: 1400px;
-
-    button {
-      margin: 0 auto;
-    }
+    text-align: center;
   }
 
   &__subtitle {
@@ -130,7 +136,6 @@ const products = [
     font-family: "Yellowtail", sans-serif;
     font-weight: normal;
     color: $green;
-    text-align: center;
     text-transform: capitalize;
   }
 
@@ -139,7 +144,6 @@ const products = [
     margin-bottom: 40px;
     font-weight: bold;
     color: $dark-blue;
-    text-align: center;
     text-transform: capitalize;
   }
 

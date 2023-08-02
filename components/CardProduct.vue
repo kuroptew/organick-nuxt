@@ -1,30 +1,32 @@
 <template>
-  <div
-    class="card-product"
-    :class="`card-product_${type}`"
-  >
-    <div class="card-product__category">
-      {{ category }}
-    </div>
-    <img
-      class="card-product__img"
-      :src="img"
-      alt="Product image"
+  <nuxt-link :to="`/shop/${id}`">
+    <div
+      class="card-product"
+      :class="`card-product_${type}`"
     >
-    <h4 class="card-product__title">
-      {{ name }}
-    </h4>
-    <div class="card-product__info">
-      <div class="price">
-        <span
-          v-if="oldPrice"
-          class="price_old"
-        > ${{ oldPrice.toFixed(2) }}</span>
-        <span class="price_current">${{ price.toFixed(2) }}</span>
+      <div class="card-product__category">
+        {{ category }}
       </div>
-      <star-rating :rating="rating" />
+      <img
+        class="card-product__img"
+        :src="img"
+        alt="Product image"
+      >
+      <h4 class="card-product__title">
+        {{ name }}
+      </h4>
+      <div class="card-product__info">
+        <div class="price">
+          <span
+            v-if="oldPrice"
+            class="price_old"
+          >${{ oldPrice.toFixed(2) }}</span>
+          <span class="price_current">${{ price.toFixed(2) }}</span>
+        </div>
+        <star-rating :rating="rating" />
+      </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -36,6 +38,10 @@ export default {
     type: {
       type: String,
       default: 'light',
+    },
+    id: {
+      type: Number,
+      required: true,
     },
     img: {
       type: String,
@@ -125,5 +131,4 @@ export default {
     color: $dark-blue;
   }
 }
-
 </style>

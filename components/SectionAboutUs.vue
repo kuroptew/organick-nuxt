@@ -52,17 +52,19 @@
             </div>
           </li>
         </ul>
-        <app-button-with-arrow
-          :text="'Shop now'"
-          :type="'blue'"
-        />
+        <nuxt-link to="/shop">
+          <app-button-arrow
+            :text="'Shop now'"
+            :type="'blue'"
+          />
+        </nuxt-link>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+import AppButtonArrow from './UI/AppButtonArrow.vue';
 
 import mailSvg from '../assets/image/mailSvg.svg';
 import leafSvg from '../assets/image/leafSvg.svg';

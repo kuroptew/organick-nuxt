@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import AppButtonWithArrow from './UI/AppButtonWithArrow.vue';
+import AppButtonWithArrow from './UI/AppButtonArrow.vue';
 
 export default {
   components: { AppButtonWithArrow },
