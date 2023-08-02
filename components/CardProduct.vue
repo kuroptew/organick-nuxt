@@ -75,6 +75,7 @@ export default {
 .card-product {
   padding: 30px;
   border-radius: 20px;
+  width: 335px;
 
   &_light {
     background-color: #FFF;
@@ -111,6 +112,7 @@ export default {
   &__info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 6px;
     border-top: 1px solid #DEDDDD;
   }

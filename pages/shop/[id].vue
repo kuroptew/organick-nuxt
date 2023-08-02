@@ -4,18 +4,16 @@
     :bg-img="bgShopSingle"
     :bg-pattern="bgPatternShopSingle"
   />
-  <div>
-    <section-product
-      :img="product.img"
-      :category="product.category"
-      :price="product.price"
-      :old-price="product.oldPrice"
-      :rating="product.rating"
-      :name="product.name"
-      :description="product.description"
-    />
-    <p>Products {{ product.id }}</p>
-  </div>
+  <section-product
+    :img="product.img"
+    :category="product.category"
+    :price="product.price"
+    :old-price="product.oldPrice"
+    :rating="product.rating"
+    :name="product.name"
+    :description="product.description"
+  />
+  <section-related-products />
 </template>
 
 <script setup>
@@ -25,6 +23,7 @@ import SectionProduct from '../../components/SectionProduct.vue';
 import bgShopSingle from '../../assets/image/bg-shop-single-hero.png';
 import bgPatternShopSingle from '../../assets/image/bg-pattern-shop-single.svg';
 import img from '../../assets/image/broccoli-img.png';
+import SectionRelatedProducts from '../../components/SectionRelatedProducts.vue';
 
 const { id } = useRoute().params;
 

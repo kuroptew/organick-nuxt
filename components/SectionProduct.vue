@@ -41,7 +41,20 @@
         />
       </div>
       <div class="product__tabs">
-        Tabs
+        <Tabs
+          :names="tabs"
+          :selected-tab="selectedTab"
+          @changeTab="changeTab"
+        >
+          <div v-if="selectedTab === 'description'">
+            DESCRIPTION.Welcome to the world of natural and organic. Here you can discover the
+            bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.
+          </div>
+          <div v-if="selectedTab === 'info'">
+            INFO.Welcome to the world of natural and organic. Here you can discover the bounty of
+            nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.
+          </div>
+        </Tabs>
       </div>
     </div>
   </section>
@@ -52,8 +65,9 @@ import { ref } from 'vue';
 
 import StarRating from './StarRating.vue';
 import AppButtonArrow from './UI/AppButtonArrow.vue';
+import Tabs from './UI/Tabs.vue';
 
-defineProps({
+const props = defineProps({
   img: {
     type: String,
     required: true,
@@ -85,23 +99,38 @@ defineProps({
 });
 
 const count = ref(1);
+// Data for tabs
+const tabs = [
+  {
+    name: 'description',
+    label: 'Products description',
+  },
+  {
+    name: 'info',
+    label: 'Additional info',
+  },
+];
+const selectedTab = ref('info');
+
+const changeTab = (tabName) => {
+  selectedTab.value = tabName;
+};
 </script>
 
 <style lang="scss" scoped>
 .section-product {
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 130px auto 140px auto;
 }
 
 .container {
   display: grid;
   grid-template-columns: 44% 50%;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-column-gap: 80px;
   grid-row-gap: 80px;
   align-items: center;
-  margin-top: 130px;
-  margin-bottom: 140px;
+  justify-content: flex-start;
   padding-left: 260px;
   padding-right: 320px;
 }
