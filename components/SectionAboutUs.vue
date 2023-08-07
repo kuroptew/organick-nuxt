@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../assets/style/colors.scss">
 <template>
   <section class="section-about-us">
     <div class="container">

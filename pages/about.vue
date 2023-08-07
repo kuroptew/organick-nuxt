@@ -4,7 +4,7 @@
     :bg-img="bgAbout"
     :bg-pattern="bgPatternAbout"
   />
-  <div>about page</div>
+  <section-choose-us />
 </template>
 
 <script setup>
