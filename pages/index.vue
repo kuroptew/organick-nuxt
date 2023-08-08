@@ -6,6 +6,7 @@
     <section-our-products />
     <section-reviews />
     <section-offers />
+    <section-econis-store />
     <section-news />
   </main>
 </template>

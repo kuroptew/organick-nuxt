@@ -209,7 +209,7 @@ import svgCard from '../assets/image/cardSecuritySvg.svg';
   &__list-advantages {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0 140px;
     column-gap: 30px;
 
