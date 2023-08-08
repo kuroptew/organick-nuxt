@@ -127,7 +127,11 @@ const products = [
   .container {
     margin: 0 auto;
     max-width: 1400px;
-    text-align: center;
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__subtitle {

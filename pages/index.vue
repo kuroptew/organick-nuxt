@@ -8,6 +8,7 @@
     <section-offers />
     <section-econis-store />
     <section-news />
+    <section-categories />
   </main>
 </template>
 
