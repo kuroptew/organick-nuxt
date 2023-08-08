@@ -5,6 +5,7 @@
     <section-about-us />
     <section-our-products />
     <section-reviews />
+    <section-offers />
     <section-news />
   </main>
 </template>
